@@ -1,0 +1,67 @@
+<div class="header">
+    <div class="project_title">
+        <mat-card-title>
+            Projects
+        </mat-card-title>
+    </div>
+  </div>
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel
+        required
+        minlength="3"
+        placeholder="Project Title"
+        #title="ngModel">
+      <mat-error *ngIf="title.invalid">Please enter a project title.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        rows="4"
+        name="content"
+        ngModel
+        required
+        placeholder="Project Descriptions"
+        #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Please enter a Description.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Select form"
+      name="formType"
+      ngModel #formType="ngModel">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Assign User"
+      name="assignUser"
+      ngModel #assignUser="ngModel" multiple>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div class="buttons">
+      <div class="create_btn">
+
+        <button
+        mat-raised-button
+        color="accent"
+        type="submit">Create Project</button>
+      </div>
+      <!-- <div class="cancel_btn">
+        <button
+        mat-raised-button
+        color="accent"
+        type="reset" (click)="cancelEdit()">Cancel</button>
+      </div> -->
+    </div>
+  </form>
+</mat-card>

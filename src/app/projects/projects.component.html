@@ -1,0 +1,127 @@
+<div class="project_container" *ngIf="!createProject">
+    <div class="header">
+      <div class="project_title">
+          <mat-card-title>
+              Projects
+          </mat-card-title>
+      </div>
+      <div class="header_right">
+          <div class="search">
+              <form class="example-form">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Search" value="Search">
+                  </mat-form-field>
+                </form>
+          </div>
+          <div class="add_projects" (click)="addProject()">
+              <button class="button button2">CREATE NEW PROJECTS</button>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card_header">
+                <mat-card-title>
+                  School projects
+                </mat-card-title>
+              </div>
+          <div class="card">
+            <div class="card_middle">
+              <mat-card-title>
+                  08
+                </mat-card-title>
+              <div class="no_forms">
+                No of forms
+              </div>
+            </div>
+            <div class="card_middle">
+                <mat-card-title>
+                    08
+                  </mat-card-title>
+                  <div class="no_forms">
+                      <div mat-card-avatar class="example-header-image"></div>
+                    </div>
+              </div>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card_header">
+                <mat-card-title>
+                  School projects
+                </mat-card-title>
+              </div>
+          <div class="card">
+            <div class="card_middle">
+              <mat-card-title>
+                  08
+                </mat-card-title>
+              <div class="no_forms">
+                No of forms
+              </div>
+            </div>
+            <div class="card_middle">
+                <mat-card-title>
+                    08
+                  </mat-card-title>
+                  <div class="no_forms">
+                      <div mat-card-avatar class="header-image"></div>
+                    </div>
+              </div>
+          </div>
+        </div>
+        <div class="column">
+            <div class="card_header">
+                <mat-card-title>
+                  School projects
+                </mat-card-title>
+              </div>
+          <div class="card">
+            <div class="card_middle">
+              <mat-card-title>
+                  08
+                </mat-card-title>
+              <div class="no_forms">
+                No of forms
+              </div>
+            </div>
+            <div class="card_middle">
+                <mat-card-title>
+                    08
+                  </mat-card-title>
+                  <div class="no_forms">
+                      <div mat-card-avatar class="example-header-image"></div>
+                    </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <mat-card>
+        <div class="header">
+            <div class="project_title">
+                <mat-card-title>
+                    Project School
+                </mat-card-title>
+            </div>
+            <div class="header_right">
+                <div class="add_projects" (click)="addProject()">
+                    <button class="button button2">CREATE NEW PROJECTS</button>
+                </div>
+            </div>
+          </div>
+          <mat-card-content>
+              <p>
+                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                bred for hunting.
+              </p>
+            </mat-card-content>
+      </mat-card>
+  </div>
+  <app-post-list *ngIf="!createProject"></app-post-list>
+  <app-post-create *ngIf="createProject"></app-post-create>
+  <div class="cancel_btn" *ngIf="createProject">
+      <button
+      mat-raised-button
+      color="accent"
+      type="reset" (click)="cancelEdit()">Cancel</button>
+    </div>

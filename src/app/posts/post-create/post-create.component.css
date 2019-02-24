@@ -1,0 +1,21 @@
+mat-form-field,
+textarea {
+  width: 100%;
+}
+.header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: auto;
+
+}
+.buttons {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+

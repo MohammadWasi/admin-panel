@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+body { margin: 0; }
+
+.header-image {
+  background-image: url('assets/trs.png');
+  background-size: cover;
+}
+
